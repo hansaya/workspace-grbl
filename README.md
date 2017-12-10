@@ -1,9 +1,9 @@
-# com-chilipeppr-workspace-grbl
-A ChiliPeppr workspace for Grbl.
+# com-chilipeppr-workspace-hansaya
+A ChiliPeppr workspace for Grbl by hansaya.
 
 
 
-## ChiliPeppr Workspace / grbl
+## ChiliPeppr Workspace / hansaya
 
 All ChiliPeppr workspaces/widgets/elements are defined using cpdefine() which is a method
 that mimics require.js. Each defined object must have a unique ID so it does
@@ -11,9 +11,9 @@ not conflict with other ChiliPeppr objects.
 
 | Item                  | Value           |
 | -------------         | ------------- | 
-| ID                    | com-chilipeppr-workspace-grbl |
-| Name                  | Workspace / grbl |
-| Description           | A ChiliPeppr workspace for Grbl. |
+| ID                    | com-chilipeppr-workspace-hansaya |
+| Name                  | Workspace / hansaya |
+| Description           | A ChiliPeppr workspace for Grbl by hansaya. |
 | chilipeppr.load() URL | http://raw.githubusercontent.com/chilipeppr-grbl/workspace-grbl/master/auto-generated-workspace.html |
 | Edit URL              | http://ide.c9.io/hansaya1/chilipeppr_workspace |
 | Github URL            | https://github.com/chilipeppr-grbl/workspace-grbl |
@@ -39,11 +39,11 @@ chilipeppr.load(
     // Callback after workspace loaded into #pnlWorkspace
     // Now use require.js to get reference to instantiated workspace
     cprequire(
-      ["inline:com-chilipeppr-workspace-grbl"], // the id you gave your workspace
-      function(myWorkspaceGrbl) {
+      ["inline:com-chilipeppr-workspace-hansaya"], // the id you gave your workspace
+      function(myWorkspaceHansaya) {
         // Callback that is passed reference to the newly loaded workspace
-        console.log("Workspace / grbl just got loaded.", myWorkspaceGrbl);
-        myWorkspaceGrbl.init();
+        console.log("Workspace / hansaya just got loaded.", myWorkspaceHansaya);
+        myWorkspaceHansaya.init();
       }
     );
   }
@@ -135,7 +135,7 @@ The table below shows, in order, the methods and properties inside the workspace
           </tr>
       </thead>
       <tbody>
-      <tr valign="top"><td>id</td><td>string</td><td>"com-chilipeppr-workspace-grbl"<br><br>The ID of the widget. You must define this and make it unique.</td></tr><tr valign="top"><td>name</td><td>string</td><td>"Workspace / grbl"</td></tr><tr valign="top"><td>desc</td><td>string</td><td>"A ChiliPeppr workspace for Grbl."</td></tr><tr valign="top"><td>url</td><td>string</td><td>"http://raw.githubusercontent.com/chilipeppr-grbl/workspace-grbl/master/auto-generated-workspace.html"</td></tr><tr valign="top"><td>fiddleurl</td><td>string</td><td>"http://ide.c9.io/hansaya1/chilipeppr_workspace"</td></tr><tr valign="top"><td>githuburl</td><td>string</td><td>"https://github.com/chilipeppr-grbl/workspace-grbl"</td></tr><tr valign="top"><td>testurl</td><td>string</td><td>"http://chilipeppr_workspace-hansaya1.c9users.io/workspace.html"</td></tr><tr valign="top"><td>widgetConsole</td><td>object</td><td>Contains reference to the Console widget object. Hang onto the reference
+      <tr valign="top"><td>id</td><td>string</td><td>"com-chilipeppr-workspace-hansaya"<br><br>The ID of the widget. You must define this and make it unique.</td></tr><tr valign="top"><td>name</td><td>string</td><td>"Workspace / hansaya"</td></tr><tr valign="top"><td>desc</td><td>string</td><td>"A ChiliPeppr workspace for Grbl by hansaya."</td></tr><tr valign="top"><td>url</td><td>string</td><td>"http://raw.githubusercontent.com/chilipeppr-grbl/workspace-grbl/master/auto-generated-workspace.html"</td></tr><tr valign="top"><td>fiddleurl</td><td>string</td><td>"http://ide.c9.io/hansaya1/chilipeppr_workspace"</td></tr><tr valign="top"><td>githuburl</td><td>string</td><td>"https://github.com/chilipeppr-grbl/workspace-grbl"</td></tr><tr valign="top"><td>testurl</td><td>string</td><td>"http://chilipeppr_workspace-hansaya1.c9users.io/workspace.html"</td></tr><tr valign="top"><td>widgetConsole</td><td>object</td><td>Contains reference to the Console widget object. Hang onto the reference
 so we can resize it when the window resizes because we want it to manually
 resize to fill the height of the browser so it looks clean.</td></tr><tr valign="top"><td>init</td><td>function</td><td>function () <br><br>The workspace's init method. It loads the all the widgets contained in the workspace
 and inits them.</td></tr><tr valign="top"><td>setupGrbl1Dot1Alert</td><td>function</td><td>function () <br><br>Show a warning for Grbl 1.1 users.</td></tr><tr valign="top"><td>getBillboard</td><td>function</td><td>function () <br><br>Returns the billboard HTML, CSS, and Javascript for this Workspace. The billboard

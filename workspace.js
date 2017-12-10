@@ -1,5 +1,5 @@
 /* global cpdefine chilipeppr cprequire */
-cprequire_test(["inline:com-chilipeppr-workspace-grbl"], function(ws) {
+cprequire_test(["inline:com-chilipeppr-workspace-hansaya"], function(ws) {
 
     console.log("initting workspace");
 
@@ -34,14 +34,14 @@ cprequire_test(["inline:com-chilipeppr-workspace-grbl"], function(ws) {
 } /*end_test*/ );
 
 // This is the main definition of your widget. Give it a unique name.
-cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function() {
+cpdefine("inline:com-chilipeppr-workspace-hansaya", ["chilipeppr_ready"], function() {
     return {
         /**
          * The ID of the widget. You must define this and make it unique.
          */
-        id: "com-chilipeppr-workspace-grbl", // Make the id the same as the cpdefine id
-        name: "Workspace / grbl", // The descriptive name of your widget.
-        desc: `A ChiliPeppr workspace for Grbl.`,
+        id: "com-chilipeppr-workspace-hansaya", // Make the id the same as the cpdefine id
+        name: "Workspace / hansaya", // The descriptive name of your widget.
+        desc: `A ChiliPeppr workspace for Grbl by hansaya.`,
         url: "(auto fill by runme.js)", // The final URL of the working widget as a single HTML file with CSS and Javascript inlined. You can let runme.js auto fill this if you are using Cloud9.
         fiddleurl: "(auto fill by runme.js)", // The edit URL. This can be auto-filled by runme.js in Cloud9 if you'd like, or just define it on your own to help people know where they can edit/fork your widget
         githuburl: "(auto fill by runme.js)", // The backing github repo
@@ -71,7 +71,7 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
             */
             this.loadWidgets();
 
-            //this.loadTemplateWidget();
+            this.loadTemplateWidget();
 
             // Create our workspace upper right corner triangle menu
             this.loadWorkspaceMenu();
@@ -189,6 +189,36 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
                     );
                 }
             );
+            
+            chilipeppr.load(
+                "com-chilipeppr-webrtcclient",
+                "http://raw.githubusercontent.com/xpix/widget-cam/master/auto-generated-widget.html",
+                function() {
+                    // Callback after widget loaded into #myDivWidgetCam
+                    // Now use require.js to get reference to instantiated widget
+                    cprequire(
+                        ["inline:com-chilipeppr-widget-cam"], // the id you gave your widget
+                        function(myObjWidgetCam) {
+                            // Callback that is passed reference to the newly loaded widget
+                            console.log("Widget / Cam just got loaded.", myObjWidgetCam);
+                            myObjWidgetCam.init();
+                        }
+                    );
+                }
+            );
+                        // WebRTC Client com-chilipeppr-webrtcclient
+            // chilipeppr.load(
+            //     "com-chilipeppr-webrtcclient",
+            //     "http://fiddle.jshell.net/chilipeppr/qWj4f/show/light/",
+
+            //     function() {
+            //         cprequire(
+            //             ["inline:com-chilipeppr-widget-webrtc-client"],
+
+            //             function(webrtcclient) {
+            //                 webrtcclient.init();
+            //             });
+            //     });
         },
 
         
@@ -1281,25 +1311,19 @@ cpdefine("inline:com-chilipeppr-workspace-grbl", ["chilipeppr_ready"], function(
 
             
 
-            /*
-            // WebRTC Client com-chilipeppr-webrtcclient
-            chilipeppr.load(
-                "com-chilipeppr-webrtcclient",
-                "http://fiddle.jshell.net/chilipeppr/qWj4f/show/light/",
+            // // WebRTC Client com-chilipeppr-webrtcclient
+            // chilipeppr.load(
+            //     "com-chilipeppr-webrtcclient",
+            //     "http://fiddle.jshell.net/chilipeppr/qWj4f/show/light/",
 
-                function() {
-                    cprequire(
-                        ["inline:com-chilipeppr-widget-webrtc-client"],
+            //     function() {
+            //         cprequire(
+            //             ["inline:com-chilipeppr-widget-webrtc-client"],
 
-                        function(webrtcclient) {
-                            webrtcclient.init();
-                        });
-                });
-                */
-
-            
-
-
+            //             function(webrtcclient) {
+            //                 webrtcclient.init();
+            //             });
+            //     });
 
         },
 
